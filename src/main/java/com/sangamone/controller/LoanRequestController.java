@@ -26,7 +26,7 @@ public class LoanRequestController {
 	@GetMapping("/viewLoanRequest")
 	public List<LoanRequest> viewLoanRequest(){
 		return dao.viewLoanRequest();
-	}
+	} 
 	
 
 }

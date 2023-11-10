@@ -20,14 +20,14 @@ public class UserServiceImpl implements UserDao {
 	@Override
 	public String addUserDetails(EnrolmentCenterUser ecu) {
 		String result="Enrolment Center Not Found";
-		EnrolmentCenter ec=ecuRepo.addUser(ecu.getCenter_name());
+		EnrolmentCenter ec=ecuRepo.addUser(ecu.getCenter_id());
 		if(ec!=null) {
 			User user=new User();
 			user.setName(ecu.getName());
 			user.setPhone_number(ecu.getPhone_number());
 			user.setAadhar(ecu.getAadhar());
 			user.setEmail(ecu.getEmail());
-			user.setCenter_id(ec.getCenter_id());
+			user.setCenter_id(ecu.getCenter_id());
 
 			userRepo.save(user);
 			result="User Details added successfully";

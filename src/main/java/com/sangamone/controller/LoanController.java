@@ -17,25 +17,25 @@ public class LoanController {
 	@Autowired
 	LoanDao loandao;
 	
-	@PostMapping("/addLoanDetails")
+	@PostMapping("/addLoanSanctionDetails")
 	public String addLoanDetails(@RequestBody Loan loan) {
 		return loandao.addLoanDetails(loan);
 		
 	}
 	
-	@GetMapping("/viewLoanDetails")
+	@GetMapping("/viewLoanSanctionDetails")
 	public List<Loan> viewLoanDetails(){
 		return loandao.viewLoanDetails();
 	}
 	
-	@GetMapping("/getLoanDetailsByUserId/{from_user_id}/{to_user_id}")
+	@GetMapping("/getLoanSanctionDetailsByUserId/{from_user_id}/{to_user_id}")
 	public List<Loan> viewLoanDetailsByUserId(@PathVariable("from_user_id") int from_user_id ,@PathVariable("to_user_id")int to_user_id)
 	{
 		return loandao.viewLoanDetailsByUserId(from_user_id,to_user_id);
 		
 	}
 	
-	@GetMapping("/getLoanDetailsByCenterId/{center_id}")
+	@GetMapping("/getLoanSanctionDetailsByCenterId/{center_id}")
 	public List<Loan> viewLoanDetailsByCenterId(@PathVariable("center_id") int center_id )
 	{
 		return loandao.viewLoanDetailsByCenterId(center_id);

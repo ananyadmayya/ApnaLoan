@@ -14,7 +14,6 @@ public class EnrolmentCenter {
 	private int center_id;
 	private String center_name;
 	private String center_location;
-	private String admin;
 	private int status;
 	public int getCenter_id() {
 		return center_id;
@@ -33,12 +32,6 @@ public class EnrolmentCenter {
 	}
 	public void setCenter_location(String center_location) {
 		this.center_location = center_location;
-	}
-	public String getAdmin() {
-		return admin;
-	}
-	public void setAdmin(String admin) {
-		this.admin = admin;
 	}
 	public int getStatus() {
 		return status;

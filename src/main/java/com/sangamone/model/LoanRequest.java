@@ -12,7 +12,7 @@ public class LoanRequest {
 @Id
 @GeneratedValue(strategy=GenerationType.IDENTITY)
 private int loan_request_id;
-private String user_name;
+private String user_id;
 private int center_id;
 private int product_id;
 public int getLoan_request_id() {
@@ -21,11 +21,13 @@ public int getLoan_request_id() {
 public void setLoan_request_id(int loan_request_id) {
 	this.loan_request_id = loan_request_id;
 }
-public String getUser_name() {
-	return user_name;
+
+
+public String getUser_id() {
+	return user_id;
 }
-public void setUser_name(String user_name) {
-	this.user_name = user_name;
+public void setUser_id(String user_id) {
+	this.user_id = user_id;
 }
 public int getCenter_id() {
 	return center_id;
@@ -39,6 +41,7 @@ public int getProduct_id() {
 public void setProduct_id(int product_id) {
 	this.product_id = product_id;
 }
+
 
 
 
